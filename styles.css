@@ -1,6 +1,9 @@
 /* ===== Reset & base ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   color: #222222;
@@ -355,9 +358,12 @@ main { max-width: 1760px; margin: 0 auto; padding: 0 40px; }
   main { padding: 0 16px; }
   .category-row { padding: 0 16px 16px; gap: 20px; }
   .card-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .search-field { min-width: 90px; padding: 10px 12px; }
-  .search-field.narrow { min-width: 80px; }
-  .search-text { display: none; }
+  .search-wrap { padding: 4px 16px 20px; }
+.search-bar { width: 100%; justify-content: space-between; }
+.search-field.narrow, .search-divider { display: none; }
+.search-field { flex: 1; min-width: 0; padding: 10px 16px; }
+.search-btn { flex-shrink: 0; padding: 12px; border-radius: 50%; }
+.search-text { display: none; }
   .footer-columns { grid-template-columns: 1fr; }
   .inspire-banner { padding: 40px 24px; }
   .inspire-text h2 { font-size: 24px; }
